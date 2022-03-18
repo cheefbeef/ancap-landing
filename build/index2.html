@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="assets/css/ancapicons.css" rel="stylesheet" />
+    <link href="/assets/css/app.css?v=1.8" rel="stylesheet" />
+    <title>Anarcho Capital | ANCAP</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+  </head>
+
+  <body class="dark bg-dark text-white">
+    <div class="main-wrapper container-fluid">
+      <div class="row main-row flex-nowrap no-gutters">
+
+        <aside id="sidebar" class="slideout-nav col-auto collapse collapse-horizontal show min-vh-100 px-0 shadow">
+            <img src="assets/images/logo-square.png" class="img-fluid d-block mx-auto my-5 w-75 logo-sidebar" alt="">
+            <div id="sidebar-nav" class="list-group border-0">
+                <a href="#" class="slideout-nav-item nav-label" data-bs-parent="#sidebar">NAVIGATION</a>
+                <a href="/" class="slideout-nav-item" data-bs-parent="#sidebar"><i class="icon-profile me-1"></i> <span>Board Member</span> </a>
+                <a href="index2.html" class="slideout-nav-item active" data-bs-parent="#sidebar"><i class="icon-chart me-1"></i> <span>Board Room</span></a>
+                <a href="index3.html" class="slideout-nav-item" data-bs-parent="#sidebar"><i class="icon-bulb me-1"></i> <span>Wealth Manager</span></a>
+                <a href="index4.html" class="slideout-nav-item" data-bs-parent="#sidebar"><i class="icon-chart_pie me-1"></i> Analytics<span></span></a>
+                <hr class="m-5">
+                <!--LINKS SECTION?-->
+                <a href="#" class="slideout-nav-item nav-label text-center" data-bs-parent="#sidebar">LINKS</a>
+                <div class="d-flex justify-content-center h5">
+                  <a href="#"><i class="icon-globe mx-2"></i></a>
+                  <a href="#"><i class="icon-twitter mx-2"></i></a>
+                  <a href="#"><i class="icon-telegram mx-2"></i></a>
+                  <a href="#"><i class="icon-discord mx-2"></i></a>
+                </div>
+                
+            </div>
+        </aside>
+
+        <main class="col p-0 min-vh-100 position-relative d-flex flex-column justify-content-between dapp-main">
+          <header class="header dapp-header">
+            <nav class="d-flex justify-content-between align-items-center p-3">
+                <!--offcanvas nav togggle-->
+                <button class="navbar-toggler border-0" type="button" data-bs-target="#sidebar" data-bs-toggle="collapse" aria-controls="sidebar"><div class="toggle-wrapper">
+                    <div class="toggle-line half start"></div>
+                    <div class="toggle-line"></div>
+                    <div class="toggle-line half end"></div>
+                  </div>
+                </button>
+                <!--<div class="navbar-brand" data-aos="zoom-in">
+                  <img src="assets/images/logo-mark.svg" class="logo-header opacity-75" alt="">
+                </div>-->
+                <div class="button-group" id="top-buttons">
+                  <a class="btn btn-outline-primary" href="#">Connect</a>
+                </div>
+            </nav>
+            
+          </header>
+
+          <svg version="1.1" id="svg_circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;" xml:space="preserve">
+            <symbol id="svgcircle" viewBox="0 0 64 64">
+              <circle fill="#000000" cx="32" cy="32" r="32"/>
+              <circle fill="currentColor" cx="32" cy="32" r="18"/>
+            </symbol>
+          </svg>
+
+          <div class="section container p-4">
+              
+              <h2 class="mb-3" data-aos="fade-in">Board Room (ANCAP DAO)</h2>
+
+              <div class="dapp-panel-row">
+                <div class="dapp-panel dapp-panel-lg" data-aos="fade-up">
+                  
+                  <div class="dapp-panel-content">
+
+                    <h5 class="dapp-panel-heading">Make a New Proposal</h5>
+                    <div class="dapp-panel-body">
+                      <div class="bs-component">
+                        <ul class="nav nav-tabs my-4">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#make_1">Add</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#make_2">Update</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#make_3">Liquidate</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#make_4">Replace</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#make_5">Emergency Remove</a>
+                          </li>
+                        </ul>
+
+                        <div id="makeProposalTabs" class="tab-content">
+                          <div class="tab-pane fade show active" id="make_1">
+                            <h5 class="">Add a New Fund</h5>
+                            <div class="form-group text-start">
+                              <label class="col-form-label mt-3" for="inputMake_1-1">operator  address</label>
+                              <input type="text" class="form-control" placeholder="0x....." id="inputMake_1-1">
+
+                              <label class="col-form-label mt-3" for="inputMake_1-2">success fee</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control input-small" placeholder="" id="inputMake_1-2"><span class="input-group-text">%</span>
+                              </div>
+                              
+                              <label class="col-form-label mt-3" for="inputMake_1-3">share of treasury</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control input-small" placeholder="" id="inputMake_1-3"><span class="input-group-text">%</span>
+                              </div>
+
+                              <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+
+                            </div><!--/form-group-->
+                          </div><!--/make_1 tab-->
+
+                          <div class="tab-pane fade" id="make_2">
+                            <h5 class="">Update an Existing Fund</h5>
+                            <div class="form-group text-start">
+                              <label class="col-form-label mt-3" for="inputMake_2-1">fund  address</label>
+                              <input type="text" class="form-control" placeholder="0x....." id="inputMake_2-1">
+
+                              <label class="col-form-label mt-3" for="inputMake_2-2">success fee</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control input-small" placeholder="" id="inputMake_2-2"><span class="input-group-text">%</span>
+                              </div>
+                              
+                              <label class="col-form-label mt-3" for="inputMake_2-3">share of treasury</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control input-small" placeholder="" id="inputMake_2-3"><span class="input-group-text">%</span>
+                              </div>
+
+                              <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+
+                            </div><!--/form-group-->
+                            
+                          </div><!--/make_2 tab-->
+
+                          <div class="tab-pane fade" id="make_3">
+                            <h5 class="">Liquidate an Existing Fund</h5>
+                            <div class="form-group text-start">
+                              <label class="col-form-label mt-3" for="inputMake_3-1">fund  address</label>
+                              <input type="text" class="form-control" placeholder="0x....." id="inputMake_3-1">
+
+                              <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+
+                            </div><!--/form-group-->
+                          </div><!--/make_3 tab-->
+
+                          <div class="tab-pane fade" id="make_4">
+                            <h5 class="">Replace a Fund Operator</h5>
+                            <div class="form-group text-start">
+                              <label class="col-form-label mt-3" for="inputMake_4-1">fund  address</label>
+                              <input type="text" class="form-control" placeholder="0x....." id="inputMake_4-1">
+
+                              <label class="col-form-label mt-3" for="inputMake_4-2">operator address</label>
+                              <input type="text" class="form-control" placeholder="0x....." id="inputMake_4-2">
+
+                              <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+
+                            </div><!--/form-group-->
+                          </div><!--/make_4 tab-->
+
+                          <div class="tab-pane fade" id="make_5">
+                            <h5 class="">Emergency Remove a Fund Operator</h5>
+                            <div class="form-group text-start">
+                              <label class="col-form-label mt-3" for="inputMake_5-1">fund  address</label>
+                              <input type="text" class="form-control" placeholder="0x....." id="inputMake_5-1">
+
+                              <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+                            </div><!--/form-group-->
+                          </div><!--/make_5 tab-->
+
+                        </div><!--/tab-content-->
+                        
+                      </div><!--/bs-component-->
+                      
+                    </div><!--/widget-body-->
+                    
+                    
+                  </div><!--/widget-content-->
+                </div><!--/widget-->
+
+                <div class="dapp-panel dapp-panel-lg" data-aos="fade-up">
+                    
+                    <div class="dapp-panel-content">
+                      <h5 class="dapp-panel-heading">View Existing Proposals</h5>
+                      <div class="dapp-panel-body">
+                        <div class="proposals-list-row">
+                          <h6 class="prop-type">Type</h6>
+                          <h6 class="prop-votes"><span class="text-muted">Vote</span><br/> <span class="h5"><a href="#" title="vote yes"><i class="icon-symbol_success"></i></a> / <a href="#" title="vote no"><i class="icon-symbol_error"></i></a></span></h6>
+                          <h6 class="prop-success-change"> %</h6>
+                          <h6 class="prop-share"> %</h6>
+                          <h6 class="prop-address">Fund / Op Address</h6>
+                          <a href="#" class="btn btn-sm btn-outline-primary">Execute Proposal</a>
+                        </div>
+                        <div class="proposals-list-row">
+                          <h6 class="prop-type">Type</h6>
+                          <h6 class="prop-votes"><span class="text-muted">Vote</span><br/> <span class="h5"><a href="#" title="vote yes"><i class="icon-symbol_success"></i></a> / <a href="#" title="vote no"><i class="icon-symbol_error"></i></a></span></h6>
+                          <h6 class="prop-success-change"> %</h6>
+                          <h6 class="prop-share"> %</h6>
+                          <h6 class="prop-address">Fund / Op Address</h6>
+                          <a href="#" class="btn btn-sm btn-outline-primary">Execute Proposal</a>
+                        </div>
+                        <div class="proposals-list-row">
+                          <h6 class="prop-type">Type</h6>
+                          <h6 class="prop-votes"><span class="text-muted">Vote</span><br/> <span class="h5"><a href="#" title="vote yes"><i class="icon-symbol_success"></i></a> / <a href="#" title="vote no"><i class="icon-symbol_error"></i></a></span></h6>
+                          <h6 class="prop-success-change"> %</h6>
+                          <h6 class="prop-share"> %</h6>
+                          <h6 class="prop-address">Fund / Op Address</h6>
+                          <a href="#" class="btn btn-sm btn-outline-primary">Execute Proposal</a>
+                        </div>
+                      </div>
+                      
+                      <div class="bs-component">
+                          <ul class="pagination">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#">«</a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">»</a>
+                            </li>
+                          </ul>
+                      </div>
+                        
+                    </div>
+                </div>
+
+              </div><!--/row-->
+              
+          </div><!--/section-->
+
+          <footer id="site-footer">
+              <div class="container pt-4 pb-3">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-lg-8 text-center">
+                      <span>&#169; Anarcho Capital. All Rights Reserved.</span>
+                  </div>
+                </div>
+              </div>
+          </footer>
+
+        </main>
+ 
+      </div><!--/row-->
+
+    </div><!--/main-wrapper container-->
+    
+    <script src="/assets/js/bootstrap.js"></script>
+    <!--<script src="/assets/js/main.js"></script>-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+      
+    </script>
+</body>
+</html>
