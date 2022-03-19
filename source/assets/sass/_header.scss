@@ -8,6 +8,17 @@
     outline: none !important;
 }
 
+/* offset fixed header for scrollto links */
+html {
+    scroll-behavior: smooth;
+}
+:target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
 //toggle
 .toggle-wrapper {
   width: 1.6rem;
@@ -20,11 +31,11 @@
 }
 
 .navbar-toggler[aria-expanded=true] .toggle-wrapper {
-  //transform: rotate(-45deg);  
+  transform: rotate(-45deg);  
 }
 
 .toggle-line {
-  background-color: #fff;
+  background-color: $white;
   border-radius: 1px;
   width: 100%;
   height: .22rem;
@@ -40,8 +51,8 @@
 }
 
 .navbar-toggler[aria-expanded=true] .toggle-line.start {
-  //transform: rotate(-90deg) translateX(3px);
-  transform: translateY(12px) translateX(-14px) rotate(135deg);
+  transform: rotate(-90deg) translateX(3px);
+  //transform: translateY(12px) translateX(-14px) rotate(135deg);
 }
 
 .toggle-line.end {
@@ -51,8 +62,8 @@
 }
 
 .navbar-toggler[aria-expanded=true] .toggle-line.end {
-  //transform: rotate(-90deg) translateX(-3px);
-  transform: translateX(-14px) translateY(-12px) rotate(45deg);
+  transform: rotate(-90deg) translateX(-3px);
+  //transform: translateX(-14px) translateY(-12px) rotate(45deg);
 }
 
 //toggle end
@@ -61,6 +72,38 @@
   width: 0;
   height: 0;
 }
+
+#navbarCollapse a.nav-link {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navbar-collapse {
+  transition: all .2s;
+  &::before {
+    transition: all .2s;
+  }
+}
+
+@include media-breakpoint-down(md) { 
+  .navbar-dark .nav-item {
+    margin: .3em 0;
+  }
+  .navbar-dark .navbar-collapse.show {
+    background-color: $gray-700;
+    &::before{
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: $gray-700;
+      z-index: -1;
+    }
+  }
+
+ }
 
 
 .navbar-light .navbar-nav .nav-link ,.navbar-light .navbar-nav .nav-link.active {

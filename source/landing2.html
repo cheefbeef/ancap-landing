@@ -8,11 +8,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Saira+Condensed:wght@300;400;500;600;800&family=Grenze+Gotisch:wght@400;600;700&family=Quintessential&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?&family=Saira+Condensed:wght@300;400;500;600;800&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="assets/css/ancapicons.css" rel="stylesheet" />
-    <link href="/assets/css/app.css?v=2.2" rel="stylesheet" />
+    <link href="/assets/css/app.css?v=2.4" rel="stylesheet" />
     <title>Anarcho Capital | ANCAP</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -38,13 +39,9 @@
                 rgba(0, 0, 0, 0.2) 72px
                 );
             }
-        hr.striper {
-            height: 2px;
-            background-color: #111;
-            margin: 0 auto;
-            opacity: 1;
-        }
+
         body.dark .card-body .text-black {color: #111 !important;}
+        
     </style>
 
   </head>
@@ -53,20 +50,10 @@
     <div class="section hero position-relative d-flex flex-column justify-content-center;" style="background-image:url(assets/images/bg-light-1.png);background-size: 100vmax 33vmax;background-repeat:no-repeat;background-position:left top;">
         <header class="header dapp-header px-3" style="background:rgba(255,255,255,0.1);border-bottom:1px solid #112;">
             <nav class="d-flex justify-content-between align-items-center py-3">
-                <!--offcanvas nav togggle-->
                 <div class="d-flex align-items-center">
-                    <button class="navbar-toggler border-0 pt-0" type="button" data-bs-target="#sidebar" data-bs-toggle="collapse" aria-controls="sidebar"><div class="toggle-wrapper">
-                        <div class="toggle-line half start"></div>
-                        <div class="toggle-line"></div>
-                        <div class="toggle-line half end"></div>
-                        </div>
-                    </button>
                     <img src="assets/images/logo-mark.svg" class="d-inline d-sm-none logo-header ms-2" alt="">
                     <img src="/assets/images/logo-wide.png" alt="" style="mix-blend-mode: hard-light;width:180px;height:auto;" class="d-none d-sm-inline-block ms-2">
                 </div>
-                
-                    
-                
                 <div class="button-group" id="top-buttons">
                     <a class="btn btn-outline-primary" href="#">Dashboard</a>
                 </div>
@@ -84,9 +71,9 @@
            
             <div class="col-12 col-md-6 offset-md-2 d-flex flex-column justify-content-center">
                 <div class="p-4 p-md-5">
-                    <h1 class="text-primary"><span class="d-block display-3">Welcome to<br> Anarcho Capital</span></h1>
+                    <h1 class="text-primary">Welcome to<br><span class="d-block display-3">Anarcho Capital</span></span></h1>
                     <p class="h4 mt-4 w-75">Introducing ANCAP: A new, revolutionary protocol for open wealth management, built on solid Libertarian principles, made by revolutionaries, for revolutionaries. </p>
-                    <p class="my-3"><a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="icon-telegram"></i> Telegram</a> <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="icon-twitter"></i> Twitter</a> <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="icon-discord"></i> Discord</a></p>
+                    <p class="my-3"><a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="icon-telegram"></i> Telegram</a> <a href="#" class="btn btn-outline-primary btn-sm me-2  my-2"><i class="icon-twitter"></i> Twitter</a> <a href="#" class="btn btn-outline-primary btn-sm me-2 my-2"><i class="icon-discord"></i> Discord</a> <a href="#" class="btn btn-outline-primary btn-sm me-2 my-2"><i class="icon-page"></i> Docs</a></p>
                     <p class="my-3"><img class="svg-icon" src="/assets/images/icon-avax-red.svg" /> Available on the Avalanche blockchain.</p>
                 </div>
                 
@@ -100,7 +87,7 @@
         <div class="container-fluid my-auto mx-0">
             <div class="row no-gutters px-0 justify-content-center justify-content-md-start align-items-center">
                 <div class="col-12 col-md-6 p-3 p-md-5">
-                    <img src="/assets/images/defi-triforce.svg" class="img-fluid px-3 px-md-0" alt="" style="width:100%;height:auto;opacity: .85;">
+                    <img src="/assets/images/defi-triforce2.svg" class="img-fluid px-3 px-md-0" alt="" style="width:100%;height:auto;opacity: .9;">
                 </div>
                 <div class="col-12 col-md-6 border-start py-2 py-md-4 px-5">
                     <div style="max-width:25em;">
@@ -233,27 +220,19 @@
     </div>
 
 
-    <div class="section py-5 position-relative">
-        
+    <div id="sec_links" class="section py-5 position-relative"> 
         <div class="container my-4">
-            <hr class="striper my-5">
+            <hr class="bg-black my-5">
             <div class="row justify-content-center align-items-center">
-                <div class="col-10 col-sm-3 mb-3">
+                <div class="col-10 col-sm-3 text-center text-md-left mb-3">
                     <img class="w-75" src="/assets/images/logo-wide.png" alt="">
                 </div>
-
                 <div class="col-auto my-3 px-4">
-                    <h4><a href="#"><i class="icon-controls" alt=""></i> Dashboard</a></h4>
+                    <h4><a class="btn btn-sm btn-outline-primary" href="#"><i class="icon-controls" alt=""></i> Dashboard</a></h4>
                 </div>
-
                 <div class="col-auto my-3 px-4">
-                    <h4><a href="#"><i class="icon-page" alt=""></i> Docs</a></h4>
+                    <h4><a class="btn btn-sm btn-outline-primary" href="#"><i class="icon-page" alt=""></i> Docs</a></h4>
                 </div>
-
-                <div class="col-auto my-3 px-4">
-                    <h4><a href="#"><i class="icon-github" alt=""></i> Github</a></h4>
-                </div>
-
                 
             </div>
 
@@ -261,19 +240,18 @@
         <style>img.icon{width:2em;height:2em;max-width:100%;margin:1em auto;display: block;}</style>
         <div class="row justify-content-center align-items-center">
             <div class="col-auto col-md-2 text-center">
-                <a href="#"><img class="icon" src="/assets/images/icon-avax.svg" alt=""> Contract</a>  
+                <a href="javascript:void(0);"><img class="icon" src="/assets/images/icon-avax.svg" alt=""> Contract</a>  
             </div>
             <div class="col-auto col-md-2 text-center">
-                <a href="#"><img class="icon" src="/assets/images/icon-dexscreener.svg" alt=""> Chart</a>  
+                <a href="javascript:void(0);"><img class="icon" src="/assets/images/icon-dexscreener.svg" alt=""> Chart</a>  
             </div>
             <div class="col-auto col-md-2 text-center">
-                <a href="#"><img class="icon" src="/assets/images/icon-cg.svg" alt=""> CoinGecko</a>
+                <a href="javascript:void(0);"><img class="icon" src="/assets/images/icon-cg.svg" alt=""> CoinGecko</a>
             </div>
             <div class="col-auto col-md-2 text-center">
-                <a href="#"><img class="icon" src="/assets/images/icon-cmc.svg" alt=""> CoinMarketCap</a>
+                <a class="disabled" href="javascript:void(0);"><img class="icon" src="/assets/images/icon-cmc.svg" alt=""> CoinMarketCap</a>
             </div>
-            
-                
+
                 
         </div>
     
