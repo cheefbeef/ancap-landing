@@ -73,39 +73,6 @@ html,body, main {
 /* Header */
 @import "header";
 
-/* Navigation Menus */
-.slideout-nav {
-    max-width: 260px;
-    transition: all .2s ease !important;
-}
-
-
-.slideout-nav-item, .dark .slideout-nav-item {
-    @extend .text-truncate, .list-group-item;
-    display: inline-block;
-    transition: all .3s;
-    border-top: 2px solid $gray-700 !important;
-    border-bottom: none;
-    border-left:none;
-    border-right: none;
-    &:hover,&:active {
-        background-color: $gray-900;
-        color: $primary;
-    }
-    &.active {
-        background-color: $gray-900 !important;
-        color: $primary !important;
-    }
-    //label only, no link
-    &.nav-label, &.nav-label:hover,&.nav-label:active {
-        background-color: $gray-700;
-        //opacity: 0.6;
-        color: $gray-500;
-        pointer-events: none;
-    }
-    
-}
-
 /* BS color overrides */
 .bg-primary {
     color: $black;
@@ -127,7 +94,7 @@ html,body, main {
     z-index:-1;
 }
 
-/* Customizing Dark Mode */
+/* Customizing BS Dark Mode */
 .dark {
     //basically white text
     h1,h2,h3,h4,h5,h6,p,li, label, legend, .form-control-plaintext {
@@ -139,6 +106,8 @@ html,body, main {
         background-color: $black;
         opacity: .6;
     }
+
+    .card-body .text-black {color: $black !important;}
 
     //dropdowns
     .dropdown-menu {
@@ -241,8 +210,6 @@ html,body, main {
     
 }
 
-
-
 /* TYPOGRAPHY */
 h1,h2,.h1,.h2 {
     font-weight: 600;
@@ -287,94 +254,8 @@ a {
   font-size: 110%;
 }
 
-/* dapp main widget area */
-.dapp-main {
-    background-image: 
-    linear-gradient(10deg, rgba($black, 0.95) 0%, rgba($gray-700,0.9) 70%, rgba($gray-800,0.95) 100%),
-    url(/assets/images/logo-mark.svg);
-    background-blend-mode:normal;
-    background-size:cover,cover;
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-attachment: fixed;
-}
-.dapp-panel-row {
-    @extend .row,.justify-content-center,.text-center;
-    margin-bottom: 3em;
-}
-.dapp-panel {
-    @extend .my-2;
-}
-//2 widget sizes based on BS grid columns, sm = 50% width
-.dapp-panel-sm {
-    @extend .col-10,.col-md-6;
-}
-.dapp-panel-lg {
-    @extend .col-12,.col-lg-10;
-}
-
-/*Forms */
-// general max width 30 chars
-input, select, textarea {
-    max-width: 30em;
-}
-// for percents, etc
-.input-small {
-    max-width: 5em;
-}
-// for AVAX amounts, single word fields
-.input-medium {
-    max-width: 10em;
-}
-
-
-h5.dapp-panel-heading {
-    @extend .fw-400,.text-start,.mb-2,.border-bottom;
-    letter-spacing: .06em;
-    color: $gray-400;
-    padding: .1em .4em;
-}
-.dapp-panel-content {
-    @extend .p-3,.bg-gradient3;
-    border: 2px solid $gray-900;
-    border-radius: 1px;
-    box-shadow: 2px 2px 8px rgba($gray-400,0.1);
-    
-}
-.dapp-panel-body {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
-.proposals-list-row, .funds-list-row {
-    @extend .mx-0, .my-2, .py-2, .row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba($gray-900,0.7);
-    > * {
-        @extend .col, .mx-2;
-    }
-}
-.token-list-group {
-    .list-group-item {
-        @extend .my-1;
-        color: $primary;
-        border-color: transparent;
-        background-color: rgba($gray-900,0.7);
-    }
-}
-
 
 /* Backgrounds */
-.bg-gradient2 {
-    background: $gray-800;
-    background: linear-gradient(0deg, rgba(45, 40, 30, 0.6) 0%, rgba($gray-900,0.6) 100%);
-}
-.bg-gradient3 {
-    background: rgb(12, 42, 48);
-    background: linear-gradient(350deg, rgba($gray-800,0.7) 0%, rgba($gray-900,0.7) 100%); 
-}
-
 
 footer {
     background: url(/assets/images/bg-foot2.jpg) no-repeat;
@@ -384,43 +265,68 @@ footer {
     box-shadow:inset 0 60px 60px -60px rgba($black,0.6);
 }
 
-.inner-shadow {
-    box-shadow: inset 0 50px 40px -50px rgba(0,0,0,0.6), inset 0 -50px 40px -50px rgba(0,0,0,0.6);
-}
 
-.svg-icon {
-    width: 1.2em;
-    height: 1.2em;
-    vertical-align: middle;
-    margin-right: .2em;
-}
+/* add to title for paint splatter behind titles */
+ 
 
-/* --- Landing Page Section Styles --- */
-
-.spray {
+/* landing page body styles ------------------ */
+body.landing {
+    /* repeating dark concrete */
     position: relative;
-    display: inline-block;
+    background:url(/assets/images/bg-concrete-repeat.jpg) repeat;
+    background-size:100vmax auto;
+}
+
+/* #top section -------------------------- */
+#sec_top {
+    background-image:url(assets/images/bg-light-1.png);
+    background-size: 100vmax 33vmax;
+    background-repeat:no-repeat;
+    background-position:left top;
+    //mobile nav, etc styles in ._header.scss
     
 }
-.spray::before {
-    opacity: .7;
-    position:absolute;
-    width:5em;
-    height: 5em;
-    z-index: -1;
-    pointer-events: none;
-    content:'';
-    top: 0;
-    left: 0;
-    margin-top: -1.8em;
-    margin-left: -1.8em;
-    background: url(/assets/images/bg-paint.svg) no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-    
-} 
+.top-visual-container { 
+    //full-width container, contains parallax img and title/intro
+    min-height: 99vh;
+    box-shadow:inset 0 -100px 100px -100px rgba(0, 0, 0, 0.7);
+    background-image:url(assets/images/bg-stencil-1.png);
+    background-size: 1200px auto;
+    background-repeat:repeat-x;
+    background-position:center bottom;
+}
+// #scene ID called by parallax script
+#scene {
+    top:0;
+    left:0;
+    z-index:-1;
+    mix-blend-mode: hard-light;
+}
 
-/* What is Defi 4.0 Cards */
+/* #sec_intro styles (DeFi 4 Has Arrived)------------------- */
+#sec_intro {
+    box-shadow:inset 0 100px 100px -100px rgba(0, 0, 0, 0.8); 
+    //multiple bg images spanning down the page
+    background: 
+        linear-gradient(203deg, rgba(0,0,0,0.6026610473290879) 0%,
+        rgba(0,0,0,0) 50%), 
+        url(assets/images/bg-stencil-3.png),
+        url(assets/images/bg-light-2.png), 
+        url(assets/images/bg-stencil-4.png); 
+        background-size: cover, 70vmax auto, 80% auto, 80vmax auto;
+        background-repeat: no-repeat; 
+        background-position: top center, 100% 10%, 100% 66%, 90% 100%;
+}
+
+.triforce {
+    //infographic
+    width:100%;
+    height:auto;
+    opacity: .9;
+}
+
+
+/* #sec_what (What is Defi 4.0) ----------- */
 .defi-card {
     display: flex;
     flex-direction: column;
@@ -449,14 +355,46 @@ footer {
 
 }
 
-.gradient-text {
-    background-color: $primary;
-    background-image: linear-gradient(70deg, $primary, $white);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+/* Various utility classes, etc --------- */
+
+.spray {
+    position: relative;
+    display: inline-block;
+    
+}
+.spray::before {
+    opacity: .7;
+    position:absolute;
+    width:5em;
+    height: 5em;
+    z-index: -1;
+    pointer-events: none;
+    content:'';
+    top: 0;
+    left: 0;
+    margin-top: -1.8em;
+    margin-left: -1.8em;
+    background: url(/assets/images/bg-paint.svg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    
+}
+
+.bg-gradient2 {
+    background: $gray-800;
+    background: linear-gradient(0deg, rgba(45, 40, 30, 0.6) 0%, rgba($gray-900,0.6) 100%);
+}
+
+.blss {
+    //faded black diagonal stripes
+    background-image:
+        repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 36px,
+        rgba(0, 0, 0, 0.2) 36px,
+        rgba(0, 0, 0, 0.2) 72px
+        );
 }
 
 .inner-shadow-top {
@@ -464,4 +402,22 @@ footer {
 }
 .inner-shadow-bottom {
     box-shadow:inset 0 150px 100px -100px black !important;
+}
+
+.inner-shadow {
+    box-shadow: inset 0 50px 40px -50px rgba(0,0,0,0.6), inset 0 -50px 40px -50px rgba(0,0,0,0.6);
+}
+
+img.icon {
+    width:2em;
+    height:2em;
+    max-width:100%;
+    margin:1em auto;
+    display: block;
+}
+.svg-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: .2em;
 }

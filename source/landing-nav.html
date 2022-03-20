@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?&family=Saira+Condensed:wght@300;400;500;600;800&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?&family=Saira+Condensed:wght@300;400;500;600&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
     
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,78 +19,58 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="manifest" href="/site.webmanifest">
-    <style>
-        .yess {
-            background-image:repeating-linear-gradient(
-                -45deg,
-                rgba(100, 100, 100, 0.2),
-                rgba(100, 100, 100, 0.2) 36px,
-                rgba(255, 238, 7, 0.12) 36px,
-                rgba(255, 238, 7, 0.12) 72px
-                );
-            }
-        .blss {
-            background-image:
-                repeating-linear-gradient(
-                -45deg,
-                transparent,
-                transparent 36px,
-                rgba(0, 0, 0, 0.2) 36px,
-                rgba(0, 0, 0, 0.2) 72px
-                );
-            }
 
-        body.dark .card-body .text-black {color: #111 !important;}
-        
-    </style>
+    <meta property="og:image" content="/assets/images/site-thumbnail.jpg">
+    <meta property="og:image:width" content="1275" />
+    <meta property="og:image:height" content="720" />
+    <meta name="twitter:image" content="/assets/images/site-thumbnail.jpg">
 
   </head>
 
-  <body class="landing dark bg-dark text-white position-relative" style="background:url(/assets/images/bg-concrete-repeat.jpg) repeat;background-size:100vmax auto;">
-    <div class="section hero position-relative d-flex flex-column justify-content-center;" style="background-image:url(assets/images/bg-light-1.png);background-size: 100vmax 33vmax;background-repeat:no-repeat;background-position:left top;">
-        <header class="header dapp-header px-3" style="background:rgba(255,255,255,0.1);border-bottom:1px solid #112;">
+  <body class="landing dark bg-dark text-white">
+    <div id="sec_top" class="section position-relative d-flex flex-column justify-content-center;">
+        <header class="header px-3">
 
-                <!--offcanvas nav togggle-->
-                <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                            <div class="toggle-wrapper">
-                                <div class="toggle-line half start"></div>
-                                <div class="toggle-line"></div>
-                                <div class="toggle-line half end"></div>
-                            </div>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <!--<img src="assets/images/logo-mark.svg" class="d-inline d-sm-none logo-header mx-2" alt="" style="width:48px;height:48px;">-->
-                            <img src="/assets/images/logo-wide.png" alt="" style="mix-blend-mode: hard-light;width:170px;height:auto;" class="d-none d-md-inline-block ms-1">
-                            
-                        </a>
-                        
-                        <div class="navbar-collapse collapse show" id="navbarCollapse">
-                            <img src="/assets/images/logo-wide.png" alt="" style="mix-blend-mode: hard-light;width:170px;height:auto;" class="d-block d-md-none m-2">
-                            <ul class="navbar-nav ms-3 me-auto mb-2 mb-md-0">
-                                <li class="nav-item"><a class="nav-link scrollto" href="#sec_intro"> Introduction </a></li>
-                                <li class="nav-item"><a class="nav-link scrollto" href="#sec_what"> What is DeFi 4.0 </a></li>
-                                <li class="nav-item"><a class="nav-link scrollto" href="#sec_how"> How it Works </a></li>
-                                <li class="nav-item"><a class="nav-link scrollto" href="#sec_links"> Links </a></li>
-                            </ul>
-                            
+            <!--offcanvas nav togggle-->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="toggle-wrapper">
+                            <div class="toggle-line half start"></div>
+                            <div class="toggle-line"></div>
+                            <div class="toggle-line half end"></div>
                         </div>
-                        <a class="btn btn-outline-primary mt-2 me-3 position-absolute" style="top:0;right:0;"href="#">Dashboard</a>
+                    </button>
+                    <a class="navbar-brand" href="#top">
+                        <!--desktop logo-->
+                        <img src="/assets/images/logo-wide.png" alt="ANCAP" class="logo-top-desktop d-none d-md-inline-block ms-1">   
+                    </a>
+                    
+                    <div class="navbar-collapse collapse show" id="navbarCollapse">
+                        <!--mobile logo-->
+                        <img src="/assets/images/logo-wide.png" alt="ANCAP" class="logo-top-mobile d-block d-md-none m-2">
+                        <ul class="navbar-nav ms-3 me-auto mb-2 mb-md-0">
+                            <li class="nav-item"><a class="nav-link scrollto" href="#sec_intro"> Introduction </a></li>
+                            <li class="nav-item"><a class="nav-link scrollto" href="#sec_what"> What is DeFi 4.0 </a></li>
+                            <li class="nav-item"><a class="nav-link scrollto" href="#sec_how"> How it Works </a></li>
+                            <li class="nav-item"><a class="nav-link scrollto" href="#sec_links"> Links </a></li>
+                        </ul>
                         
                     </div>
-                </nav>
-                
+                    <a class="btn btn-outline-primary dashboard-button mt-2 me-3" href="#">Dashboard</a>
+                    
+                </div>
+            </nav>
 
-        
         </header>
         
-        <div class="row g-0 position-relative" style="min-height: 99vh;box-shadow:inset 0 -100px 100px -100px rgba(0, 0, 0, 0.7);background-image:url(assets/images/bg-stencil-1.png);background-size: 1200px auto;background-repeat:repeat-x;background-position:center bottom;">
-            <div class="position-absolute h-100 w-100" id="scene" style="top:0;left:0;z-index:-1; mix-blend-mode: hard-light;">
-                <img data-depth="0.05" data-friction-x=".3" src="/assets/images/fists-hole.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto">
-                <img data-depth="0.1" data-friction-x=".3" src="/assets/images/fist-bg.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto">
-                <img data-depth="0.15" data-friction-x=".2" src="/assets/images/fist-fist.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto">
-                <img data-depth="0.2" data-friction-x=".06" src="/assets/images/fist-fg.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto"> 
+        <div class="top-visual-container row g-0 position-relative">
+            <div id="scene" class="position-absolute h-100 w-100">
+                <!-- parallax -->
+                <img data-depth="0.05" data-friction-x=".3" src="/assets/images/fist-layer-1.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto">
+                <img data-depth="0.1" data-friction-x=".3" src="/assets/images/fist-layer-2.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto">
+                <img data-depth="0.15" data-friction-x=".2" src="/assets/images/fist-layer-3.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto">
+                <img data-depth="0.25" data-friction-x=".06" src="/assets/images/fist-layer-4.png" class="d-inline-block col-12 col-md-6 offset-md-5 my-auto"> 
             </div>
            
             <div class="col-12 col-md-6 offset-md-2 d-flex flex-column justify-content-center">
@@ -107,18 +87,17 @@
         
     
     </div><!--/section-->
-    <div id="sec_intro" class="section pt-3" style="box-shadow:inset 0 100px 100px -100px rgba(0, 0, 0, 0.8); background: linear-gradient(203deg, rgba(0,0,0,0.6026610473290879) 0%, rgba(0,0,0,0) 50%), url(assets/images/bg-stencil-3.png),url(assets/images/bg-light-2.png), url(assets/images/bg-stencil-4.png); background-size: cover, 70vmax auto, 80% auto, 80vmax auto;background-repeat: no-repeat; background-position: top center, 100% 10%, 100% 66%, 90% 100%;">
+    <div id="sec_intro" class="section pt-3">
         <div class="container-fluid my-auto mx-0">
             <div class="row no-gutters px-0 justify-content-center justify-content-md-start align-items-center">
                 <div class="col-12 col-md-6 p-3 p-md-5">
-                    <img src="/assets/images/defi-triforce2.svg" class="img-fluid px-3 px-md-0" alt="" style="width:100%;height:auto;opacity: .9;">
+                    <img src="/assets/images/defi-triforce2.svg" class="triforce img-fluid px-3 px-md-0" alt="DeFi 4.0">
                 </div>
                 <div class="col-12 col-md-6 border-start py-2 py-md-4 px-5">
                     <div style="max-width:25em;">
                     <h1 class="mb-3" data-aos="fade-in">DeFi 4.0 Has Arrived</h1>
                     <p class="h5" data-aos="fade-in" data-aos-delay="300">The world's first protocol for scalable, trustless and low-risk wealth management as a service, conducted in a fair, safe and transparent way - made possible through ANCAP's Delegated Farming as a Service (DFaaS) architecture.</p>
                     </div>
-                    
 
                 </div>
             </div>
@@ -172,13 +151,14 @@
             <h1 class="display-4 border-start border-primary ps-3 mt-5 mb-2 spray">How Delegated Farming as a Service (DFaaS) works:</h1>
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <img src="/assets/images/defi4-diagram-trans.svg" alt="" class="img-fluid mt-0 col-lg-10">
+                    <img src="/assets/images/defi4-diagram-trans.svg" alt="" class="d-none d-sm-inline-block img-fluid mt-0 col-lg-10">
                 </div>
             </div>
             <div class="row justify-content-center mb-5">
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
                     <div class="border-start h-100" data-aos="fade-in">
                         <div class="card-body">
+                            <img src="/assets/images/defi4-step-1.png" alt="" class="defi-diagram d-block w-75 mx-auto d-sm-none">
                             <span class="display-4 text-primary">01</span>
                             <p class="lead m-0">New wealth managers offer their services through a DAO proposal</p>
                         </div>
@@ -189,6 +169,7 @@
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
                     <div class="border-start h-100" data-aos="fade-in">
                         <div class="card-body"> 
+                            <img src="/assets/images/defi4-step-2.png" alt="" class="defi-diagram d-block w-75 mx-auto d-sm-none">
                             <span class="display-4 text-primary">02</span> 
                             <p class="lead m-0">$ANCAP holders vote on the proposal</p>
                         </div>
@@ -198,6 +179,7 @@
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
                     <div class="border-start h-100" data-aos="fade-in">
                         <div class="card-body">
+                        <img src="/assets/images/defi4-step-3.png" alt="" class="defi-diagram d-block w-75 mx-auto d-sm-none">
                         <span class="display-4 text-primary">03</span>
                         <p class="lead m-0">  A new, dedicated smart contract fund is created where funds are held</p>
                     </div>
@@ -208,6 +190,7 @@
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
                     <div class="border-start h-100" data-aos="fade-in">
                         <div class="card-body">
+                        <img src="/assets/images/defi4-step-4.png" alt="" class="defi-diagram d-block w-75 mx-auto d-sm-none">
                         <span class="display-3 text-primary">04</span>
                         <p class="lead m-0">Wealth managers are authorized to interact with the new fund contract strictly to buy, sell, yield farm, etc</p>
                     </div>
@@ -218,6 +201,7 @@
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
                     <div class="border-start h-100" data-aos="fade-in">
                         <div class="card-body">
+                        <img src="/assets/images/defi4-step-5.png" alt="" class="defi-diagram d-block w-75 mx-auto d-sm-none">
                         <span class="display-3 text-primary">05</span>
                         <p class="lead m-0">At the end of every month, profits are distributed to $ANCAP holders</p>
                     </div>
@@ -228,6 +212,7 @@
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
                     <div class="border-start h-100" data-aos="fade-in">
                         <div class="card-body">
+                            <img src="/assets/images/defi4-step-6.png" alt="" class="defi-diagram d-block w-75 mx-auto d-sm-none">
                             <span class="display-3 text-primary">06</span>
                             <p class="lead m-0">Wealth managers who perform well can request a pay bump or a higher share of the treasury to manage from the DAO. Wealth managers who perform poorly can be removed by the DAO, and entire funds can be reassigned.</p>
                         </div>
@@ -235,11 +220,8 @@
                     
                 </div>
 
-                
-
             </div>
-
-            
+  
         </div>
     </div>
 
@@ -265,7 +247,7 @@
             </div>
 
         </div>
-        <style>img.icon{width:2em;height:2em;max-width:100%;margin:1em auto;display: block;}</style>
+        
         <div class="row justify-content-center align-items-center">
             <div class="col-auto col-md-2 text-center">
                 <a href="javascript:void(0);"><img class="icon" src="/assets/images/icon-avax.svg" alt=""> Contract</a>  
@@ -280,8 +262,7 @@
                 <a class="disabled" href="javascript:void(0);"><img class="icon" src="/assets/images/icon-cmc.svg" alt=""> CoinMarketCap</a>
             </div>
             
-                
-                
+     
         </div>
     
     </div><!--/section-->
@@ -297,7 +278,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="/assets/js/bootstrap.js"></script>
-    <!--<script src="/assets/js/main.js"></script>-->
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
