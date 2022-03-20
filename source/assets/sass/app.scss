@@ -310,9 +310,9 @@ body.landing {
     background: 
         linear-gradient(203deg, rgba(0,0,0,0.6026610473290879) 0%,
         rgba(0,0,0,0) 50%), 
-        url(assets/images/bg-stencil-3.png),
-        url(assets/images/bg-light-2.png), 
-        url(assets/images/bg-stencil-4.png); 
+        url(/assets/images/bg-stencil-3.png),
+        url(/assets/images/bg-light-2.png), 
+        url(/assets/images/bg-stencil-4.png); 
         background-size: cover, 70vmax auto, 80% auto, 80vmax auto;
         background-repeat: no-repeat; 
         background-position: top center, 100% 10%, 100% 66%, 90% 100%;
